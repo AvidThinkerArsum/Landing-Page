@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.5rem;
+
+  /* Light mode colors */
+  --background: 255 255 255;
+  --foreground: 0 0 0;
+  --primary: 255 107 0;
+  --primary-foreground: 255 255 255;
+  --depth-1: 245 245 245;
+  --depth-2: 230 230 230;
+  --depth-3: 200 200 200;
+  --accent-red: 139 0 0;
+  --accent-orange: 255 69 0;
+}
+
+.dark {
+  /* Dark mode colors */
+  --background: 0 0 0;
+  --foreground: 255 255 255;
+  --primary: 255 107 0;
+  --primary-foreground: 255 255 255;
+  --depth-1: 18 18 18;
+  --depth-2: 26 26 26;
+  --depth-3: 43 43 43;
+  --accent-red: 139 0 0;
+  --accent-orange: 255 69 0;
+}
+
+@layer base {
+  * {
+    @apply border-depth-3;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground font-body;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-hover {
+    @apply hover:bg-gradient-to-r hover:from-accent-red hover:to-accent-orange transition-all duration-300;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-depth-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-depth-3 hover:bg-primary rounded-full;
+}
+
+/* Hide Next.js development indicator */
+#__next-build-watcher {
+  display: none !important;
+}
+
+nextjs-portal {
+  display: none !important;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}

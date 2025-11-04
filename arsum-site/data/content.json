@@ -1,0 +1,160 @@
+{
+  "videos": [
+    {
+      "title": "5 AM Morning Routine As A Pomona College Student",
+      "description": "A glimpse into the early morning habits and routines of a Pomona College student striving for excellence and productivity.",
+      "url": "https://www.youtube.com/watch?v=hzcZihnzz68",
+      "thumbnail": "https://img.youtube.com/vi/hzcZihnzz68/maxresdefault.jpg"
+    },
+    {
+      "title": "Day in the Life as an AI Engineer in SF #1",
+      "description": "Follow along for a day in the life working as an AI Engineer in San Francisco, exploring the challenges and excitement of building AI products.",
+      "url": "https://www.youtube.com/watch?v=_-IsUntDpXA",
+      "thumbnail": "https://img.youtube.com/vi/_-IsUntDpXA/maxresdefault.jpg"
+    },
+    {
+      "title": "Day in the Life as an AI Engineer at a YC Startup in SF #2",
+      "description": "An inside look at what it's like working at a Y Combinator startup in San Francisco, building AI-powered solutions in a fast-paced environment.",
+      "url": "https://www.youtube.com/watch?v=9S_NitZYetA",
+      "thumbnail": "https://img.youtube.com/vi/9S_NitZYetA/maxresdefault.jpg"
+    },
+    {
+      "title": "You are a product of your Environment",
+      "description": "Exploring how your surroundings shape who you become and why being intentional about your environment is critical for growth and success.",
+      "url": "https://www.youtube.com/watch?v=bB7jaUZfoSw",
+      "thumbnail": "https://img.youtube.com/vi/bB7jaUZfoSw/maxresdefault.jpg"
+    },
+    {
+      "title": "The Importance of Self Education",
+      "description": "Why self-education is essential in today's world and how taking ownership of your learning can unlock opportunities beyond traditional education.",
+      "url": "https://www.youtube.com/watch?v=CZh4e4zH_Lk",
+      "thumbnail": "https://img.youtube.com/vi/CZh4e4zH_Lk/maxresdefault.jpg"
+    },
+    {
+      "title": "How to Avoid Burnout in College and Beyond",
+      "description": "Practical strategies and mindset shifts to prevent burnout during college and maintain sustainable productivity throughout your career.",
+      "url": "https://www.youtube.com/watch?v=tABOaD_kemU",
+      "thumbnail": "https://img.youtube.com/vi/tABOaD_kemU/maxresdefault.jpg"
+    },
+    {
+      "title": "Build Personal Portfolio Using Github AND GoDaddy In Less Than 10 Minutes",
+      "description": "A step-by-step tutorial showing how to quickly build and deploy your personal portfolio website using GitHub and GoDaddy.",
+      "url": "https://www.youtube.com/watch?v=bpROjj9NOLk",
+      "thumbnail": "https://img.youtube.com/vi/bpROjj9NOLk/maxresdefault.jpg"
+    },
+    {
+      "title": "My Journey From 20/20 Rejections to Acceptance In Dream College on Full Scholarship",
+      "description": "The inspiring story of overcoming rejection from every college applied to and ultimately earning admission to a dream college with a full scholarship.",
+      "url": "https://www.youtube.com/watch?v=Flt8Srae4zE",
+      "thumbnail": "https://img.youtube.com/vi/Flt8Srae4zE/maxresdefault.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "title": "How to Actually Set Goals and Accomplish Them",
+      "description": "A practical framework for setting and achieving ambitious goals, with real examples from earning a Pomona scholarship, building Mulligan, and optimizing systems to ship 10x faster.",
+      "url": "https://medium.com/@arsum/placeholder-goals",
+      "date": "2024-12-22",
+      "tags": ["Productivity", "Goals", "Career"]
+    },
+    {
+      "title": "How big is the opportunity with AI? Answer: Very Big",
+      "description": "Exploring the massive potential and untapped opportunities in the AI landscape.",
+      "url": "https://medium.com/@arsum/placeholder0",
+      "date": "2024-12-20",
+      "tags": ["AI", "Opportunity", "Future"]
+    },
+    {
+      "title": "Why I Made the Shift from AI Engineer to AI Product Engineer",
+      "description": "My journey transitioning from pure AI engineering to becoming an AI Product Engineer and why it matters.",
+      "url": "https://medium.com/@arsum/placeholder1",
+      "date": "2024-12-15",
+      "tags": ["AI", "Product", "Career"]
+    },
+    {
+      "title": "How Rebranding Works: How I Abandoned SWE and Became an AI Engineer",
+      "description": "The strategic pivot from Software Engineering to AI Engineering and the lessons learned along the way.",
+      "url": "https://medium.com/@arsum/placeholder2",
+      "date": "2024-12-10",
+      "tags": ["Career", "AI", "Personal Brand"]
+    },
+    {
+      "title": "From 0 -> 1: Building and Launching Mulligan",
+      "description": "The story of building and launching Pyq AI's self-serve insurance automation platform.",
+      "url": "https://medium.com/@arsum/placeholder3",
+      "date": "2024-11-30",
+      "tags": ["Product", "Startup", "AI"]
+    },
+    {
+      "title": "Why Every AI Product Needs a Product Engineer",
+      "description": "Exploring the unique role of AI Product Engineers and why traditional product management falls short.",
+      "url": "https://medium.com/@arsum/placeholder4",
+      "date": "2024-11-10",
+      "tags": ["AI", "Product", "Career"]
+    },
+    {
+      "title": "Building Real-Time Systems That Scale",
+      "description": "Lessons learned from building systems that handle millions of events per day.",
+      "url": "https://medium.com/@arsum/placeholder5",
+      "date": "2024-10-05",
+      "tags": ["Engineering", "Scale", "Architecture"]
+    }
+  ],
+  "books": [
+    {
+      "title": "Amp It Up",
+      "author": "Frank Slootman",
+      "cover": "/images/banner.jpg",
+      "takeaways": [
+        "Amp it Up means raise standards and expectations - never half-ass anything, always overdeliver",
+        "Hire for grit, drive, and learning speed - these matter more than credentials",
+        "Focus on the SINGLE most important thing and eliminate noise - clarity over consensus",
+        "Execution >>>>> Strategy - be a driver with personal ownership, not a passive passenger",
+        "Be quick to fire and weed out - culture is made by what and who you tolerate"
+      ]
+    },
+    {
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "cover": "/images/img_1.png",
+      "takeaways": [
+        "Don't criticize, condemn, or complain - change people's attitudes by changing yours first",
+        "Give honest and sincere appreciation - look for the good in people and tell them",
+        "Remember and use people's names - it's fundamental to building relationships",
+        "Be a great listener and show genuine interest - listening is as important as speaking",
+        "Smile and bring energy to every interaction - happiness depends on mental attitude, not circumstances",
+        "Be patient and make people feel valued - every person is superior to you in some way"
+      ]
+    },
+    {
+      "title": "Wooden on Leadership",
+      "author": "John Wooden",
+      "cover": "/images/headstarter.png",
+      "takeaways": [
+        "Add takeaways for Wooden on Leadership",
+        "Add more details",
+        "Add key lessons"
+      ]
+    },
+    {
+      "title": "High Performance Habits",
+      "author": "Brendon Burchard",
+      "cover": "/images/banner.jpg",
+      "takeaways": [
+        "Add your key takeaways for High Performance Habits",
+        "Add more insights",
+        "Add important lessons"
+      ]
+    },
+    {
+      "title": "Sell Like Crazy",
+      "author": "Sabri Suby",
+      "cover": "/images/img_1.png",
+      "takeaways": [
+        "Add your key takeaways for Sell Like Crazy",
+        "Add more insights",
+        "Add sales strategies"
+      ]
+    }
+  ]
+}
