@@ -1,0 +1,13 @@
+# deps
+node_modules/
+
+# next
+.next/
+out/
+.vercel/
+dist/
+
+# env / OS
+.env*
+.DS_Store
+
