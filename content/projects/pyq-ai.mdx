@@ -20,7 +20,7 @@ links:
 
 At Pyq AI, we built **Mulligan** — an AI automation platform for insurance brokerages. Insurance brokers were spending 15+ hours weekly on manual data entry, policy comparisons, and commission reconciliation. This work didn't scale: to 10x revenue, they'd need to 10x headcount.
 
-We built 5 core products to automate these workflows: Quoting, Submissions, Proposals, Policy Comparison, and Commissions. As the AI Product Engineer at this 2-person startup, I wore every hat — building product features and transforming our go-to-market from enterprise sales to self-serve Product-Led Growth.
+We built 5 core products to automate these workflows: Quoting, Submissions, Proposals, Policy Comparison, and Commissions. As the AI Product Engineer at this seed-stage startup, I wore every hat — building product features and transforming our go-to-market from enterprise sales to self-serve Product-Led Growth.
 
 ---
 
@@ -73,20 +73,19 @@ We built 5 core products to automate these workflows: Quoting, Submissions, Prop
 ## <span id="plg-infrastructure">1. PLG Infrastructure: Stripe, Metronome, and Slack</span>
 
 **Challenge:**
-Insurance brokers face extreme seasonality—processing 50 policies in January (renewal season) and only 5 in July. Flat subscription pricing ($99/mo unlimited) punishes this pattern, charging the same whether they use the product heavily or barely at all. We needed self-serve pricing aligned with customer value that supported seasonal usage without requiring sales calls or contract negotiations for a 2-person startup.
+Insurance brokers face extreme seasonality—processing 50 policies in January (renewal season) and only 5 in July. Flat subscription pricing ($99/mo unlimited) punishes this pattern, charging the same whether they use the product heavily or barely at all. We needed self-serve pricing aligned with customer value that supported seasonal usage without requiring sales calls or contract negotiations for a seed-stage startup.
 
 **What I Built:**
-Built complete self-serve billing infrastructure combining three systems: **Stripe** for payments, **Metronome** for usage tracking, and **Slack** for real-time visibility.
+Built complete self-serve billing infrastructure combining **Stripe** for payments and **Metronome** for usage tracking.
 
 - **Credit-based pricing**: Customers buy credits upfront (Free: 10, Plus: 30, Pro: 250, Team: 1250), consume them per action, with 1-year rollover
 - **Stripe integration**: Instant upgrade flow (&lt;2 min from free → paid), no credit card required for free tier
-- **Metronome tracking**: Every user action sends billing events (policy uploads, proposal generation, comparisons, submissions, quotes) to track usage across all 5 products
+- **Metronome tracking**: Every user action sends billing events to track usage.
 - **Organization-scoped billing**: Every event tagged with org ID for per-organization usage limits and invoicing
-- **Slack notifications**: Real-time alerts for signups, upgrades, high usage, and failures
 
 <img src="/images/slacknotification.png" alt="Slack notification for user activity" className="w-full rounded-lg border-2 border-primary/20 my-6" />
 
-*Slack notifications provide real-time visibility into user signups, upgrades, and feature usage—critical for a 2-person team*
+*Slack notifications provide real-time visibility into user signups, upgrades, and feature usage*
 
 **Key Technical Decisions:**
 - **Metronome over building in-house**: Stripe handles payments but can't track complex usage patterns. Metronome specializes in usage-based billing with meters and tiered pricing—gave us production-ready infrastructure immediately instead of spending months building it ourselves.
@@ -98,13 +97,12 @@ Built complete self-serve billing infrastructure combining three systems: **Stri
 - **No card for free tier**: Users can process features worth 10 credits freely without payment. See value before paying. Removes signup friction.
 - **Instant self-serve upgrade**: Free → paid in &lt;2 minutes via Stripe Checkout. No sales calls. Any friction in upgrade flow kills PLG conversion.
 - **Tiered volume discounts**: Subscription credits are cheaper than pay-as-you-go credits, but also stickier—customers commit to monthly payments. Incentivizes users to upgrade to subscription plans as usage grows. High-volume customers automatically pay more, so revenue scales with customer success.
-- **Slack visibility**: As a 2-person team with no sales/support staff, Slack alerts let us see signups, upgrades, and issues instantly. We can proactively reach out to engaged users and debug problems quickly without building admin dashboards.
 
 **Impact:**
 - Self-serve signup and upgrade: no sales calls or contracts required
 - Usage-based revenue scales with customer success: customers pay proportional to value, supporting seasonal workflows
 - Free → paid conversion: users see value before paying
-- Slack + Metronome enable 2-person team to track usage and support users instantly
+- Metronome enables the team to track usage and monitor platform activity
 
 ## <span id="live-demos">2. Setting Up Live Demos</span>
 
@@ -156,14 +154,7 @@ Converting website visitors to sign-ups is hard when the product is complex. Ins
 Insurance carriers don't offer APIs—they have web portals designed for humans to manually click through forms. Getting quotes from multiple carriers required brokers to spend ~1 hour per customer manually visiting each carrier website, filling forms, and copying results. This manual process was slow, expensive, and didn't scale.
 
 **What I Built:**
-- Document parsing pipeline extracting customer information from uploaded files
-- Automated browser-based system that navigates carrier websites and fills forms programmatically
-- Separate automation flows for each carrier (all have different portal UIs)
-- Docker-containerized scripts for consistent execution environments
-- Parallel processing system running multiple carriers simultaneously
-- Robust retry logic and graceful degradation for flaky carrier websites
-- Data extraction and normalization across different carrier output formats
-- Slack monitoring alerts when carrier integrations break
+Built an automated quoting system that processes customer information, interacts with multiple carrier portals programmatically, and handles the complexity of different carrier formats and requirements. The system includes monitoring, error handling, and parallel processing capabilities to ensure reliability and speed.
 
 <video autoPlay loop muted playsInline width="100%" className="rounded-lg my-6 border-2 border-primary/20">
   <source src="/images/Quoting-video.mov" type="video/mp4" />
@@ -179,12 +170,11 @@ Insurance carriers don't offer APIs—they have web portals designed for humans 
 **Key Product Decisions:**
 - **Graceful degradation**: If automation fails, system falls back to manual quote request rather than blocking the user. Automation improves UX but doesn't create new failure modes.
 - **Carrier prioritization**: Focus automation on high-volume carriers first. 80/20 rule—automate the 5 carriers that represent 80% of quote volume.
-- **Slack monitoring**: Real-time alerts when carrier integrations break (they change UIs frequently). As a 2-person team, we needed immediate visibility.
+- **Slack monitoring**: Real-time alerts when carrier integrations break (they change UIs frequently). As a seed-stage startup, we needed immediate visibility.
 
 **Impact:**
 - Quote time: ~1 hour → &lt;10 minutes (per customer)
 - Automated ~90% of quoting workflows
-- Saved clients ≈$1M annually by eliminating manual quoting labor
 - Parallel processing handles multiple carriers simultaneously
 - Brokers can quote more customers per day, increasing revenue capacity
 
@@ -197,9 +187,9 @@ Different insurance carriers use wildly inconsistent terminology for the same co
 
 **What I Built:**
 - Semantic matching system that intelligently groups and standardizes inconsistent insurance terminology across carriers
-- "Unite Similar Items" toggle button for seamless view switching between original and standardized data
+- Ability to seamlessly switch between original carrier data and standardized unified views
 - Original names dropdown showing all unified terminology for full transparency
-- Comprehensive processing across 7 policy sections (coverages, limits, deductibles, endorsements, exclusions, premia, important callouts)
+- Comprehensive processing across multiple policy sections (coverages, limits, deductibles, endorsements, etc.)
 
 <div className="grid grid-cols-2 gap-6 my-6">
   <div>
@@ -217,8 +207,8 @@ Different insurance carriers use wildly inconsistent terminology for the same co
 - **Transparency by default**: Preserve all original carrier terminology in the background while displaying unified names. Brokers can always drill down to see exactly what each carrier called a specific item.
 
 **Key Product Decisions:**
-- **Toggle between views**: Let brokers switch between original (raw carrier data) and standardized (unified names) views. Builds trust—they can verify the system's matching decisions.
-- **Original names dropdown**: When items are unified, show all original names from different policies in an expandable dropdown. Transparency prevents "black box" concerns.
+- **View switching**: Let brokers switch between different data views. Builds trust—they can verify the system's matching decisions.
+- **Full transparency**: When items are unified, brokers can always see the original carrier terminology. Transparency prevents "black box" concerns.
 - **Broker verification**: Show unified view as default after processing, but always allow returning to original data. The system augments broker expertise, doesn't replace it.
 
 **Impact:**
@@ -237,8 +227,7 @@ Insurance brokers spend hours manually creating branded proposals—copying poli
 **What I Built:**
 - Automated PDF → HTML template conversion pipeline
 - Organization-scoped template library for multi-agency support
-- LLM-powered proposal generator (fills templates with policy data)
-- WYSIWYG proposal editor for manual adjustments
+- Automated proposal generator with editable interface for manual adjustments
 - Multi-mode PDF export (single-page, multi-page, smart pagination)
 
 **How It Works**: Agencies upload their branded proposal PDF once. We convert it to an HTML template with placeholders. Then generate unlimited proposals for any policy—preserving the agency's logo, colors, and layout while filling in policy-specific data.
@@ -261,7 +250,7 @@ Insurance brokers spend hours manually creating branded proposals—copying poli
 
 **Key Product Decisions:**
 - **Brand consistency over flexibility**: Let agencies upload their own PDF templates. System preserved exact branding rather than forcing a generic template. Higher adoption.
-- **Edit before export**: Generated proposals are editable (WYSIWYG). LLM fills ~90% correctly, brokers fix the rest. Builds trust while saving time.
+- **Edit before export**: Generated proposals are editable (WYSIWYG). Automated filling handles ~90% correctly, brokers fix the rest. Builds trust while saving time.
 
 **Impact:**
 - Proposal generation: hours → minutes
@@ -288,8 +277,7 @@ Built an automated ACORD form system that handles bi-directional workflows: extr
 - 80-90% auto-fill accuracy across ACORD 125, 126, and 140 forms
 - Hours of manual form entry → minutes of verification and adjustment
 - One-click conversion: uploaded customer documents → carrier-ready ACORD PDFs
-- Foundation for fully automated carrier submission workflow
-- Enabled self-serve submissions without manual data entry
+- Enabled self-serve, automated carrier submission workflow
 
 ---
 
@@ -304,7 +292,7 @@ Designed and built the complete GTM funnel at **[usemulligan.com](https://usemul
 - **&lt;5 minute onboarding**: Land → Try demo → Sign up → Use product
 - **Value-first approach**: Users see functionality before paying
 
-Built with Next.js for fast load times (&lt;2s), SEO optimization, and seamless integration with Stripe checkout. The page showcases all 5 products, pricing tiers, and instant signup—designed to convert visitors without human intervention.
+Built with Next.js for fast load times (&lt;2s), SEO optimization, and seamless integration with Stripe checkout. The page showcases all products, pricing tiers, and instant signup—designed to convert visitors without human intervention.
 
 ---
 
@@ -318,51 +306,14 @@ The documentation includes getting started guides, product-specific tutorials, A
 
 ---
 
-## Overall Impact
-
-**User Value Delivered**:
-- ✅ **90% automation rate**: Automated ~90% of brokerage back office workflows
-- ✅ **15+ hours saved weekly**: Per brokerage, reclaimed from manual data entry and paperwork
-- ✅ **10x performance improvement**: Cut live demo latency from 150s → 15s
-- ✅ **Quote time reduction**: From ~1 hour manual → &lt;10 minutes automated
-- ✅ **$1M annual savings**: Saved clients approximately $1M annually in labor costs
-- ✅ **Self-serve PLG**: Users go from landing page → using product in &lt;5 minutes
-- ✅ **80-90% ACORD autofill**: Eliminated hours of manual form filling
-- ✅ **Policy comparison**: Compare 50+ page policies in seconds vs. hours
-
-**Business Impact**:
-- Self-serve signup with no sales team required
-- Usage-based pricing that scales with customer success
-- Free tier → paid conversion through value demonstration
-- Credit-based model supports seasonal insurance workflows
-- Real-time visibility into user behavior via Slack notifications
-
-**What I Built**:
-1. Live demo system with 10x performance optimization
-2. Complete landing page and signup flow
-3. Comprehensive documentation replacing human support
-4. Automated quoting system across multiple carriers
-5. Semantic policy comparison system
-6. Branded proposal generation system
-7. ACORD form automation
-8. Full PLG infrastructure (Stripe + Metronome + Slack)
-
-**The Transformation**: Took an enterprise product requiring sales calls and manual onboarding, and turned it into a self-serve platform where users can discover, try, and pay—all with minimal human intervention.
-
----
+## Summary
 
 **Stack**: Next.js, FastAPI, Stripe, Metronome, Docker, AWS, Google Cloud, S3
 
 **Timeline**: June 2025 - Present
 
-**Company**: Pyq AI (YC W23) — 2-person startup
+**Company**: Pyq AI (YC W23) — seed-stage startup
 
 **Role**: AI Product Engineer
 
 **Live Product**: [usemulligan.com](https://usemulligan.com)
-
-**Key Metrics**:
-- Automated ~90% of brokerage back office workflows
-- Saved 15+ hours weekly per agency
-- 5K+ daily users across platform
-- $1M annual client savings
