@@ -7,7 +7,7 @@
     "summary": "Drove Pyq AI's transition from enterprise sales to Product-Led Growth by designing the pre-launch strategy for Mulligan, an integrated insurance automation platform. Pyq has raised $1.4M and automates the back offices of insurance brokerages.",
     "impact": [
       "Cut live demo latency 10x (150s → 15s) for PLG launch of Mulligan",
-      "Saved clients ≈ $1M annually by automating ~90% of brokerage back offices",
+      "Saved clients ≈ $700K annually by automating ~90% of brokerage back offices",
       "Reduced quote time from 1 hr to <10 min with Docker-containerized RPA"
     ],
     "stack": ["Next.js", "FastAPI", "Docker", "AWS", "Google Cloud", "Product-Led Growth", "Robotic Process Automation", "Product Launch"],
