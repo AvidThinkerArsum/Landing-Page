@@ -142,7 +142,7 @@
       "title": "Amp It Up",
       "author": "Frank Slootman",
       "cover": "/images/banner.jpg",
-      "gradient": "from-red-500 to-orange-600",
+      "gradient": "from-rose-600 via-red-600 to-orange-500",
       "takeaways": [
         "Amp it Up means raise standards and expectations - never half-ass anything, always overdeliver",
         "Hire for grit, drive, and learning speed - these matter more than credentials",
@@ -155,7 +155,7 @@
       "title": "How to Win Friends and Influence People",
       "author": "Dale Carnegie",
       "cover": "/images/img_1.png",
-      "gradient": "from-blue-500 to-purple-600",
+      "gradient": "from-blue-600 via-indigo-600 to-purple-600",
       "takeaways": [
         "Don't criticize, condemn, or complain - change people's attitudes by changing yours first",
         "Give honest and sincere appreciation - look for the good in people and tell them",
@@ -169,7 +169,7 @@
       "title": "Wooden on Leadership",
       "author": "John Wooden",
       "cover": "/images/headstarter.png",
-      "gradient": "from-green-500 to-teal-600",
+      "gradient": "from-emerald-600 via-green-600 to-teal-600",
       "takeaways": [
         "Failing to prepare is preparing to fail - make every day your masterpiece",
         "Care about your character (who you are), not your reputation (what others think)",
@@ -182,7 +182,7 @@
       "title": "High Performance Habits",
       "author": "Brendon Burchard",
       "cover": "/images/banner.jpg",
-      "gradient": "from-purple-500 to-pink-600",
+      "gradient": "from-violet-600 via-purple-600 to-fuchsia-600",
       "takeaways": [
         "Seek clarity on who you are, what you want, and practice being your future self now",
         "Manage energy like an athlete - sleep, movement, and mental clarity are non-negotiable",
@@ -195,7 +195,7 @@
       "title": "Sell Like Crazy",
       "author": "Sabri Suby",
       "cover": "/images/img_1.png",
-      "gradient": "from-yellow-500 to-orange-600",
+      "gradient": "from-amber-500 via-yellow-500 to-orange-600",
       "takeaways": [
         "Add your key takeaways for Sell Like Crazy",
         "Add more insights",
