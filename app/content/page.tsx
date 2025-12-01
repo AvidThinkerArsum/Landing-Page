@@ -55,7 +55,7 @@ export default function ContentPage() {
           {/* Tabs */}
           <Tabs defaultValue="videos" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
-              <TabsTrigger value="writing">Product Writing</TabsTrigger>
+              <TabsTrigger value="writing">Featured Writing</TabsTrigger>
               <TabsTrigger value="videos">YouTube Videos</TabsTrigger>
               <TabsTrigger value="books">Book Reviews</TabsTrigger>
             </TabsList>
@@ -147,8 +147,8 @@ export default function ContentPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredBooks.map((book, index) => (
                   <Card key={index} className="overflow-hidden">
-                    <div className="relative h-64 bg-gradient-to-br from-depth-2 to-depth-3 flex items-center justify-center p-8">
-                      <h3 className="text-3xl md:text-4xl font-display font-bold text-center leading-tight">
+                    <div className={`relative h-64 bg-gradient-to-br ${book.gradient || 'from-depth-2 to-depth-3'} flex items-center justify-center p-8`}>
+                      <h3 className="text-3xl md:text-4xl font-display font-bold text-center leading-tight text-white">
                         {book.title}
                       </h3>
                     </div>

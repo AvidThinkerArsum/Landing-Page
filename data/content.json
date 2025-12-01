@@ -47,9 +47,46 @@
       "description": "The inspiring story of overcoming rejection from every college applied to and ultimately earning admission to a dream college with a full scholarship.",
       "url": "https://www.youtube.com/watch?v=Flt8Srae4zE",
       "thumbnail": "https://img.youtube.com/vi/Flt8Srae4zE/maxresdefault.jpg"
+    },
+    {
+      "title": "How to treat your Goals like a Business and WIN",
+      "description": "Learn how to apply business principles to your personal goals for maximum achievement and accountability.",
+      "url": "https://www.youtube.com/watch?v=EDo1ilpr2L0",
+      "thumbnail": "https://img.youtube.com/vi/EDo1ilpr2L0/maxresdefault.jpg"
+    },
+    {
+      "title": "My UnderGrad Math Thesis Talk",
+      "description": "A presentation of my undergraduate mathematics thesis research, sharing insights from years of academic work.",
+      "url": "https://www.youtube.com/watch?v=y5-rl2GUfXo",
+      "thumbnail": "https://img.youtube.com/vi/y5-rl2GUfXo/maxresdefault.jpg"
+    },
+    {
+      "title": "Claremont Colleges Student Answers All Your Financial Aid Questions",
+      "description": "Everything you need to know about financial aid, early decision, citizenship, and paying for college at the Claremont Colleges.",
+      "url": "https://www.youtube.com/watch?v=4UsDfP3Kd7I",
+      "thumbnail": "https://img.youtube.com/vi/4UsDfP3Kd7I/maxresdefault.jpg"
+    },
+    {
+      "title": "Travel Vlog: 24 Hour Flight to LA",
+      "description": "Join me on an epic 24-hour journey from across the world to Los Angeles, documenting the entire travel experience.",
+      "url": "https://www.youtube.com/watch?v=9pojH-amvKA",
+      "thumbnail": "https://img.youtube.com/vi/9pojH-amvKA/maxresdefault.jpg"
+    },
+    {
+      "title": "How You Can Go To LA For ONLY $7! (Crazy Deal?)",
+      "description": "Discover an incredible travel hack that lets you get to Los Angeles for just $7 - too good to be true?",
+      "url": "https://www.youtube.com/watch?v=Z2J2SQDNpDU",
+      "thumbnail": "https://img.youtube.com/vi/Z2J2SQDNpDU/maxresdefault.jpg"
     }
   ],
   "articles": [
+    {
+      "title": "I Read High Performance Habits So You Don't Have To — Here's What Actually Changed My Life",
+      "description": "A deep dive into the most actionable insights from Brendon Burchard's High Performance Habits and the specific practices that transformed my productivity and mindset.",
+      "url": "https://medium.com/@arsumnadeemch16203/i-read-high-performance-habits-so-you-dont-have-to-here-s-what-actually-changed-my-life-6e86f35e3d2a",
+      "date": "2024-12-28",
+      "tags": ["Productivity", "Personal Development", "Book Review"]
+    },
     {
       "title": "How to Set Business Goals for your Personal Development and WIN",
       "description": "A strategic guide to aligning business objectives with personal growth, helping you build a framework that drives both professional success and self-improvement.",
@@ -105,6 +142,7 @@
       "title": "Amp It Up",
       "author": "Frank Slootman",
       "cover": "/images/banner.jpg",
+      "gradient": "from-red-500 to-orange-600",
       "takeaways": [
         "Amp it Up means raise standards and expectations - never half-ass anything, always overdeliver",
         "Hire for grit, drive, and learning speed - these matter more than credentials",
@@ -117,6 +155,7 @@
       "title": "How to Win Friends and Influence People",
       "author": "Dale Carnegie",
       "cover": "/images/img_1.png",
+      "gradient": "from-blue-500 to-purple-600",
       "takeaways": [
         "Don't criticize, condemn, or complain - change people's attitudes by changing yours first",
         "Give honest and sincere appreciation - look for the good in people and tell them",
@@ -130,28 +169,33 @@
       "title": "Wooden on Leadership",
       "author": "John Wooden",
       "cover": "/images/headstarter.png",
+      "gradient": "from-green-500 to-teal-600",
       "takeaways": [
-        "Add takeaways for Wooden on Leadership",
-        "Add more details",
-        "Add key lessons"
+        "Failing to prepare is preparing to fail - make every day your masterpiece",
+        "Care about your character (who you are), not your reputation (what others think)",
+        "Keep peaks and valleys balanced - things don't get easier, you get tougher",
+        "Don't let what you cannot do interfere with what you can do",
+        "Discipline yourself so others won't need to - family comes first"
       ]
     },
     {
       "title": "High Performance Habits",
       "author": "Brendon Burchard",
       "cover": "/images/banner.jpg",
+      "gradient": "from-purple-500 to-pink-600",
       "takeaways": [
-        "Seek clarity on who you want to become and what success means - high performers define their future self before taking action",
-        "Actively surround yourself with mentors and peers who stretch your thinking, sharpen your skills, and hold you to higher standards",
-        "Operate from an internal standard of excellence, not external comparison - push for better execution, focus, and discipline daily",
-        "Root your motivation in a clear, emotionally meaningful purpose - your 'why' fuels consistency when the work gets hard",
-        "Generate energy through proper rest, nutrition, and mental clarity - high performance requires sustainable physical and emotional fuel"
+        "Seek clarity on who you are, what you want, and practice being your future self now",
+        "Manage energy like an athlete - sleep, movement, and mental clarity are non-negotiable",
+        "Build necessity through environment - you fall to the level of your surroundings",
+        "Focus on five needle-moving actions and optimize them relentlessly",
+        "Demonstrate courage through action - movement dissolves fear and adversity builds strength"
       ]
     },
     {
       "title": "Sell Like Crazy",
       "author": "Sabri Suby",
       "cover": "/images/img_1.png",
+      "gradient": "from-yellow-500 to-orange-600",
       "takeaways": [
         "Add your key takeaways for Sell Like Crazy",
         "Add more insights",
