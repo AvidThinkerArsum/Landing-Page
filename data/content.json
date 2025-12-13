@@ -20,7 +20,7 @@
     },
     {
       "title": "You are a product of your Environment",
-      "description": "Exploring how your surroundings shape who you become and why being intentional about your environment is critical for growth and success.",
+      "description": "Practical strategies and mindset shifts to prevent burnout during college and maintain sustainable productivity throughout your career.",
       "url": "https://www.youtube.com/watch?v=bB7jaUZfoSw",
       "thumbnail": "https://img.youtube.com/vi/bB7jaUZfoSw/maxresdefault.jpg"
     },
@@ -32,7 +32,7 @@
     },
     {
       "title": "How to Avoid Burnout in College and Beyond",
-      "description": "Practical strategies and mindset shifts to prevent burnout during college and maintain sustainable productivity throughout your career.",
+      "description": "Exploring how your surroundings shape who you become and why being intentional about your environment is critical for growth and success.",
       "url": "https://www.youtube.com/watch?v=tABOaD_kemU",
       "thumbnail": "https://img.youtube.com/vi/tABOaD_kemU/maxresdefault.jpg"
     },
@@ -189,6 +189,20 @@
         "Build necessity through environment - you fall to the level of your surroundings",
         "Focus on five needle-moving actions and optimize them relentlessly",
         "Demonstrate courage through action - movement dissolves fear and adversity builds strength"
+      ]
+    },
+    {
+      "title": "The Millionaire Fastlane",
+      "author": "M.J DeMarco",
+      "cover": "/images/banner.jpg",
+      "gradient": "from-green-600 via-emerald-600 to-teal-500",
+      "takeaways": [
+        "Three paths to wealth: Sidewalk (spend>earn), Slow lane (trade time for wealth), Fastlane (entrepreneurship for freedom and wealth while young)",
+        "The process makes the money, not the event - you can't outsource the struggle, earn your stripes",
+        "Build money trees for passive income: Rental systems (A+), Software (A), Content (B+), Distribution (B), Human systems (C+)",
+        "Solve problems the market will pay for - don't build what you love, build what people need",
+        "Live below your means while expanding your means - maximize income, not minimize expenses",
+        "Execution is king - embrace failure, master financial literacy, and take massive action"
       ]
     },
     {

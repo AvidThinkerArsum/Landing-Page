@@ -57,7 +57,7 @@ export default function ContentPage() {
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
               <TabsTrigger value="writing">Featured Writing</TabsTrigger>
               <TabsTrigger value="videos">YouTube Videos</TabsTrigger>
-              <TabsTrigger value="books">Book Reviews</TabsTrigger>
+              <TabsTrigger value="books">Book Summaries</TabsTrigger>
             </TabsList>
 
             {/* Videos Tab */}
