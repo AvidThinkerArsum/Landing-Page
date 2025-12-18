@@ -1,6 +1,12 @@
 {
   "videos": [
     {
+      "title": "How to Become a High Performer in Life",
+      "description": "A comprehensive guide to developing the mindsets, habits, and strategies that separate high performers from everyone else.",
+      "url": "https://www.youtube.com/watch?v=mRS83_19zJw",
+      "thumbnail": "https://img.youtube.com/vi/mRS83_19zJw/maxresdefault.jpg"
+    },
+    {
       "title": "5 AM Morning Routine As A Pomona College Student",
       "description": "A glimpse into the early morning habits and routines of a Pomona College student striving for excellence and productivity.",
       "url": "https://www.youtube.com/watch?v=hzcZihnzz68",
@@ -80,6 +86,13 @@
     }
   ],
   "articles": [
+    {
+      "title": "My 2025 Journey: FOCUS",
+      "description": "It details my 28 learnings from 2025 of practicing high performance and extreme ownership.",
+      "url": "https://medium.com/@arsumnadeemch16203/my-2025-journey-focus-in-th-c3b777ef08f6",
+      "date": "2025-12-18",
+      "tags": ["High Performance", "Personal Development", "Extreme Ownership"]
+    },
     {
       "title": "I Read High Performance Habits So You Don't Have To — Here's What Actually Changed My Life",
       "description": "A deep dive into the most actionable insights from Brendon Burchard's High Performance Habits and the specific practices that transformed my productivity and mindset.",
