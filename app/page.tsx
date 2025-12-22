@@ -18,13 +18,13 @@ export default function Home() {
       <Hero
         title="ARSUM CHAUDHARY"
         subtitle="AI Engineer & Product Builder"
-        description="Turning ideas into systems that scale"
+        description="Current Role: Founding Engineer at Pyq AI (YC W23)"
         backgroundVideo="/images/coder.mp4"
       >
         <div className="flex flex-wrap gap-4 justify-center">
           <Button asChild size="lg">
             <Link href="/products">
-              View Work
+              View Engineering Work
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
@@ -39,7 +39,7 @@ export default function Home() {
       {/* Featured Work */}
       <Section id="work" fullWidth className="bg-depth-1">
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
-          Featured Work
+          Featured Engineering Work
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 px-8">
           {featuredProjects.map((project) => (
@@ -60,7 +60,7 @@ export default function Home() {
         <div className="text-center">
           <Button asChild size="lg" variant="outline">
             <Link href="/products">
-              View All Work
+              View All Engineering Work
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
@@ -163,7 +163,7 @@ export default function Home() {
           "Failing to prepare is preparing to fail"
         </h2>
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-center tracking-widest">
-          M Y &nbsp; 3 &nbsp; I D E N T I T I E S
+          How I Operate as an Engineer
         </h2>
 
         {/* AI Product Engineer */}
@@ -176,10 +176,10 @@ export default function Home() {
             </div>
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">AI Product Engineer</h3>
+            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">Product-minded engineer</h3>
             <p className="text-lg text-foreground/80 mb-6">
-              <strong className="text-primary">Pyq AI (YC W23)</strong><br />
-              AI Engineer building AI powered workflow automation solutions for the back offices of insurance brokerages
+              <strong className="text-primary">Ship features users love</strong><br />
+              I bridge engineering and product thinking - shipping production systems that solve real problems while staying technically excellent. Every line of code connects to user impact and business outcomes.
             </p>
             <Button asChild variant="outline">
               <a href="https://www.linkedin.com/in/arsum/" target="_blank" rel="noopener noreferrer">
@@ -192,10 +192,10 @@ export default function Home() {
         {/* High Performance Coach */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">High Performer</h3>
+            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">High-performance systems thinker</h3>
             <p className="text-lg text-foreground/80 mb-6">
-              <strong className="text-primary">Extreme Ownership</strong><br />
-              Taking complete responsibility for outcomes and continuously striving to become the best version of myself through discipline and high-performance habits
+              <strong className="text-primary">Design for scale and reliability</strong><br />
+              I architect systems that handle complexity gracefully - from API design to database optimization to infrastructure. I think in abstractions, design patterns, and performance trade-offs to build software that lasts.
             </p>
           </div>
           <div>
@@ -217,10 +217,10 @@ export default function Home() {
             </div>
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">YouTuber</h3>
+            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">Builder who communicates</h3>
             <p className="text-lg text-foreground/80 mb-6">
-              <strong className="text-primary italic">Documenting It All</strong><br />
-              "Bringing all of our voices to the world through my Youtube Channel"
+              <strong className="text-primary italic">Share knowledge openly</strong><br />
+              I believe great engineers teach what they learn. Through writing, videos, and open-source contributions, I document technical insights and help others level up - from system design to career growth.
             </p>
             <Button asChild variant="outline">
               <a href="https://www.youtube.com/@arsum_nc" target="_blank" rel="noopener noreferrer">
