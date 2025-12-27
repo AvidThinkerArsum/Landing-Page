@@ -1,0 +1,26 @@
+{
+  "name": "Arsum Chaudhary",
+  "role": "Founding (AI Product) Engineer",
+  "company": "Pyq AI (YC W23)",
+  "education": "Pomona College '25 | Computer Science + Mathematics | Dean's List",
+  "currentWork": "Building AI automations and microservices to automate insurance brokerage workflows at Pyq AI (YC W23).",
+  "profileSummary": "Skilled backend and AI engineer with 1+ years of experience building production systems and full-stack applications. Specializes in architecting scalable microservices, integrating AI models for document processing, and designing database solutions that handle high-traffic workloads. Experienced in fast-paced startup environments, seeking growth and building opportunities in backend engineering, AI/ML engineering, or full-stack positions at high-growth companies.",
+  "photo": "/images/pic2.png",
+  "techStack": {
+    "Languages": ["Python (5 yrs)", "TypeScript (3 yrs)", "JavaScript (3 yrs)", "SQL (3 yrs)", "Java (2 yrs)"],
+    "Cloud & Infrastructure": ["Docker (2 yrs)", "AWS EC2/S3 (2 yrs)", "Google Cloud Functions (1 yr)", "PostgreSQL (3 yrs)", "Pandas (3 yrs)", "Data Pipelines (2 yrs)", "Database Indexing (2 yrs)"],
+    "AI & ML": ["Prompt Engineering (2 yrs)", "Function Calling (2 yrs)", "TensorFlow (2 yrs)", "NLP (2 yrs)", "Claude Code (1 yr)", "Cursor (1 yr)"],
+    "Frameworks & Tools": ["Next.js (2 yrs)", "React (3 yrs)", "FastAPI (2 yrs)", "REST APIs (2 yrs)", "Streamlit (1 yr)", "Playwright RPA (1 yr)"],
+    "Product": ["Product-Led Growth", "A/B Testing", "Roadmapping", "User Research", "Data Visualization", "Agile Workflow", "Usage Based Billing", "Press Release", "Product Launch", "Product Lifecycle Journey", "Customer Satisfaction"]
+  },
+  "achievements": [
+    "Built Docker-containerized RPA system that reduced insurance quote processing time from 1 hour to under 10 minutes",
+    "Designed and deployed FastAPI microservices on Google Cloud Functions, cutting demo latency by 10x (150s → 15s) for live demos on landing page"
+  ],
+  "links": {
+    "resume": "/Product_Resume.pdf",
+    "linkedin": "https://www.linkedin.com/in/arsum/",
+    "github": "https://github.com/AvidThinkerArsum",
+    "email": "#contact"
+  }
+}
