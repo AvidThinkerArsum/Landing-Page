@@ -82,7 +82,7 @@ export default function ProfileSummary({
       variants={containerVariants}
       className="mb-16"
     >
-      <Card className="!bg-[#121212] !border-[#2b2b2b] !text-white overflow-hidden">
+      <Card className="bg-background dark:bg-[#121212] border-border dark:border-[#2b2b2b] text-foreground dark:text-white overflow-hidden">
         <div className="p-8 md:p-12">
           {/* Top Section: Image Left, Details Right */}
           <div className="grid md:grid-cols-[400px_1fr] gap-8 mb-10">

@@ -62,9 +62,9 @@ export default function ProjectCard({
       whileHover={{ scale: 1.01 }}
       className="h-full"
     >
-      <Card className="h-full flex flex-col overflow-hidden hover:border-primary/50 transition-colors !bg-[#121212] !border-[#2b2b2b] !text-white">
+      <Card className="h-full flex flex-col overflow-hidden hover:border-primary/50 transition-colors bg-background dark:bg-[#121212] border-border dark:border-[#2b2b2b] text-foreground dark:text-white">
         {/* Cover media */}
-        <div className="relative h-60 w-full bg-[#1a1a1a] overflow-hidden group/cover">
+        <div className="relative h-60 w-full bg-muted dark:bg-[#1a1a1a] overflow-hidden group/cover">
           {usePlaceholder ? (
             <div className={`w-full h-full ${getGradientColor()} flex items-center justify-center`}>
               {tags.includes("AI") || tags.includes("ML") ? (
@@ -128,8 +128,8 @@ export default function ProjectCard({
         </div>
 
         <CardHeader>
-          <CardTitle className="text-xl text-white">{title}</CardTitle>
-          <CardDescription className="text-gray-300">{summary}</CardDescription>
+          <CardTitle className="text-xl text-foreground">{title}</CardTitle>
+          <CardDescription className="text-foreground/80">{summary}</CardDescription>
         </CardHeader>
 
         <CardContent className="flex-grow space-y-4">
@@ -140,7 +140,7 @@ export default function ProjectCard({
               {impact.map((item, index) => (
                 <div key={index} className="flex items-start gap-2 text-sm">
                   <span className="text-primary mt-0.5">•</span>
-                  <span className="text-gray-300">{item}</span>
+                  <span className="text-foreground/80">{item}</span>
                 </div>
               ))}
             </div>

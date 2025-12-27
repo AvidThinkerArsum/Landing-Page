@@ -34,7 +34,7 @@ export default function ContentPage() {
               Content & Learning
             </h1>
             <p className="text-xl text-foreground/70 text-center max-w-3xl mx-auto">
-              Videos, writing, and book notes on AI, product, and engineering.
+              Videos, writing, and book notes on AI, college, and high performance.
             </p>
           </div>
 
@@ -69,9 +69,9 @@ export default function ContentPage() {
                     href={video.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block"
+                    className="group block h-full"
                   >
-                    <Card className="overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <Card className="h-full flex flex-col overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:scale-105">
                       <div className="relative h-48 bg-depth-2 overflow-hidden">
                         <Image
                           src={video.thumbnail}
@@ -87,9 +87,9 @@ export default function ContentPage() {
                           </div>
                         </div>
                       </div>
-                      <CardHeader>
-                        <CardTitle className="text-lg mb-2">{video.title}</CardTitle>
-                        <CardDescription className="text-sm text-foreground/60 leading-relaxed">
+                      <CardHeader className="flex-grow">
+                        <CardTitle className="text-lg mb-2 line-clamp-2">{video.title}</CardTitle>
+                        <CardDescription className="text-sm text-foreground/60 leading-relaxed line-clamp-3">
                           {video.description}
                         </CardDescription>
                       </CardHeader>

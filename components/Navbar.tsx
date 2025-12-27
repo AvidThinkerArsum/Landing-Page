@@ -55,9 +55,8 @@ export default function Navbar() {
     { label: "Contact", href: "/about#contact", onClick: handleContactClick },
   ];
 
-  // Always show background on non-home pages, or when scrolled on home page
-  const isHomePage = pathname === "/";
-  const shouldShowBackground = !isHomePage || scrolled;
+  // Always show background on all pages (portfolio is now at /)
+  const shouldShowBackground = true;
 
   return (
     <nav

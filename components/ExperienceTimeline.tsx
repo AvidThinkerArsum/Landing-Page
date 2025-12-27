@@ -80,10 +80,10 @@ export default function ExperienceTimeline({ experiences }: ExperienceTimelinePr
           </div>
 
           {/* Content Card */}
-          <div className="flex-1 !bg-[#121212] !border-[#2b2b2b] !text-white rounded-lg border shadow-lg overflow-hidden mb-8">
+          <div className="flex-1 bg-background dark:bg-[#121212] border-border dark:border-[#2b2b2b] text-foreground dark:text-white rounded-lg border shadow-lg overflow-hidden mb-8">
             <div className="grid md:grid-cols-3 gap-6 p-6">
               {/* Left: Image */}
-              <div className="relative h-48 md:h-auto bg-[#1a1a1a] rounded-lg overflow-hidden">
+              <div className="relative h-48 md:h-auto bg-muted dark:bg-[#1a1a1a] rounded-lg overflow-hidden">
                 {usePlaceholder(exp.cover) ? (
                   <div className={`w-full h-full ${getGradientColor(exp.tags)} flex items-center justify-center`}>
                     {exp.tags.includes("AI") || exp.tags.includes("ML") ? (
@@ -116,11 +116,11 @@ export default function ExperienceTimeline({ experiences }: ExperienceTimelinePr
 
               {/* Middle: Content */}
               <div className="md:col-span-2 flex flex-col">
-                <h3 className="text-2xl font-display font-bold text-white mb-2">
+                <h3 className="text-2xl font-display font-bold text-foreground mb-2">
                   {exp.title}
                 </h3>
 
-                <p className="text-gray-300 mb-4">{exp.summary}</p>
+                <p className="text-foreground/80 mb-4">{exp.summary}</p>
 
                 {/* Impact */}
                 {exp.impact && exp.impact.length > 0 && (
@@ -128,7 +128,7 @@ export default function ExperienceTimeline({ experiences }: ExperienceTimelinePr
                     <h4 className="text-sm font-bold text-primary uppercase mb-2">Key Impact</h4>
                     <ul className="space-y-1">
                       {exp.impact.slice(0, 3).map((item, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-start">
+                        <li key={idx} className="text-sm text-foreground/70 flex items-start">
                           <span className="text-primary mr-2">•</span>
                           <span>{item}</span>
                         </li>
@@ -159,7 +159,7 @@ export default function ExperienceTimeline({ experiences }: ExperienceTimelinePr
                   </Button>
 
                   {exp.links?.demo && (
-                    <Button asChild variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+                    <Button asChild variant="outline" size="sm">
                       <a href={exp.links.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         View Website
@@ -168,7 +168,7 @@ export default function ExperienceTimeline({ experiences }: ExperienceTimelinePr
                   )}
 
                   {!exp.links?.demo && exp.links?.repo && (
-                    <Button asChild variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+                    <Button asChild variant="outline" size="sm">
                       <a href={exp.links.repo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         GitHub
