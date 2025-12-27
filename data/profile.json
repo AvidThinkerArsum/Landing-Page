@@ -8,14 +8,18 @@
   "photo": "/images/pic2.png",
   "techStack": {
     "Languages": ["Python (5 yrs)", "TypeScript (3 yrs)", "JavaScript (3 yrs)", "SQL (3 yrs)", "Java (2 yrs)"],
-    "Cloud & Infrastructure": ["Docker (2 yrs)", "AWS EC2/S3 (2 yrs)", "Google Cloud Functions (1 yr)", "PostgreSQL (3 yrs)", "Pandas (3 yrs)", "Data Pipelines (2 yrs)", "Database Indexing (2 yrs)"],
+    "Cloud & Infrastructure": ["Docker (2 yrs)", "AWS EC2/S3 (2 yrs)", "Google Cloud Functions (1 yr)", "PostgreSQL (3 yrs)", "Pandas (3 yrs)", "Data Pipelines (2 yrs)"],
     "AI & ML": ["Prompt Engineering (2 yrs)", "Function Calling (2 yrs)", "TensorFlow (2 yrs)", "NLP (2 yrs)", "Claude Code (1 yr)", "Cursor (1 yr)"],
     "Frameworks & Tools": ["Next.js (2 yrs)", "React (3 yrs)", "FastAPI (2 yrs)", "REST APIs (2 yrs)", "Streamlit (1 yr)", "Playwright RPA (1 yr)"],
-    "Product": ["Product-Led Growth", "A/B Testing", "Roadmapping", "User Research", "Data Visualization", "Agile Workflow", "Usage Based Billing", "Press Release", "Product Launch", "Product Lifecycle Journey", "Customer Satisfaction"]
+    "Product": ["Product-Led Growth", "Roadmapping", "User Research", "Usage Based Billing", "Press Release", "Product Launch", "Customer Satisfaction"]
   },
   "achievements": [
     "Built Docker-containerized RPA system that reduced insurance quote processing time from 1 hour to under 10 minutes",
-    "Designed and deployed FastAPI microservices on Google Cloud Functions, cutting demo latency by 10x (150s → 15s) for live demos on landing page"
+    "Designed and deployed FastAPI microservices on Google Cloud Functions, cutting demo latency by 10x (150s → 15s) for live demos on landing page",
+    "Architected multi-agent API orchestration system for third-party carrier integrations, enabling automated quote workflows with error recovery and state persistence across distributed agents",
+    "Implemented production usage-based billing infrastructure with Stripe and Metronome, tracking credit consumption across 5 products and supporting self-serve PLG conversion",
+    "Drove Product-Led Growth transformation from enterprise sales to self-serve model, building free tier onboarding, live demos, and instant upgrade flow converting visitors in under 10 minutes",
+    "Built AI-powered policy comparison engine with semantic matching and proposal generator, automating hours of manual document processing with 90%+ accuracy"
   ],
   "links": {
     "resume": "/Product_Resume.pdf",

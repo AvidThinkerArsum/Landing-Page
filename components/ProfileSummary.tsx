@@ -184,7 +184,7 @@ export default function ProfileSummary({
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-3 pt-4"
+            className="flex flex-col sm:flex-row gap-3 pt-4 justify-center"
           >
             <Button asChild size="lg" className="flex-1 sm:flex-initial">
               <Link href={links.resume} target="_blank" rel="noopener noreferrer">

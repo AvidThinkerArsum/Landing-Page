@@ -4,10 +4,11 @@ date: "2024-01-15"
 problem: "Insurance brokers spend 15+ hours weekly on manual data entry, policy comparison, and commission reconciliation—work that doesn't scale."
 solution: "Built AI automation platform with 5 core products (quoting, submissions, proposals, policy comparison, commissions) and transformed go-to-market from enterprise to self-serve PLG with usage-based billing."
 role: "AI Product Engineer"
-stack: ["Next.js", "FastAPI", "Playwright RPA", "Stripe", "Metronome", "S3", "OpenAI"]
+stack: ["Next.js", "FastAPI", "Docker", "PostgreSQL", "Playwright RPA", "Google Cloud Functions", "Product-Led Growth"]
 impact:
   - "~90% quoting automation (vs manual processes)"
   - "15+ hours saved weekly per brokerage"
+  - "Multi-agent API orchestration with error recovery"
   - "Self-serve onboarding: free tier → paid in &lt;10 min"
   - "Credit-based pricing: $0/mo (free) → $999/mo (team)"
 links:
@@ -47,23 +48,28 @@ We built 5 core products to automate these workflows: Quoting, Submissions, Prop
     <div className="text-sm text-foreground/60">Semantic Matching</div>
   </a>
 
+  <a href="#integrations" className="p-4 border-2 border-primary/20 rounded-lg hover:border-primary hover:bg-primary/5 transition-all">
+    <div className="font-bold text-primary">5. Third-Party Integrations</div>
+    <div className="text-sm text-foreground/60">Multi-Agent API Orchestration</div>
+  </a>
+
   <a href="#proposals" className="p-4 border-2 border-primary/20 rounded-lg hover:border-primary hover:bg-primary/5 transition-all">
-    <div className="font-bold text-primary">5. Proposals</div>
+    <div className="font-bold text-primary">6. Proposals</div>
     <div className="text-sm text-foreground/60">Branded Templates</div>
   </a>
 
   <a href="#acord-forms" className="p-4 border-2 border-primary/20 rounded-lg hover:border-primary hover:bg-primary/5 transition-all">
-    <div className="font-bold text-primary">6. ACORD Forms</div>
+    <div className="font-bold text-primary">7. ACORD Forms</div>
     <div className="text-sm text-foreground/60">Form Automation</div>
   </a>
 
   <a href="#landing-page" className="p-4 border-2 border-primary/20 rounded-lg hover:border-primary hover:bg-primary/5 transition-all">
-    <div className="font-bold text-primary">7. Landing Page</div>
+    <div className="font-bold text-primary">8. Landing Page</div>
     <div className="text-sm text-foreground/60">Self-Serve Signup Flow</div>
   </a>
 
   <a href="#documentation" className="p-4 border-2 border-primary/20 rounded-lg hover:border-primary hover:bg-primary/5 transition-all">
-    <div className="font-bold text-primary">8. Documentation</div>
+    <div className="font-bold text-primary">9. Documentation</div>
     <div className="text-sm text-foreground/60">Mulligan Docs</div>
   </a>
 </div>
@@ -219,7 +225,53 @@ Different insurance carriers use wildly inconsistent terminology for the same co
 
 ---
 
-## <span id="proposals">5. Templates and Proposals</span>
+## <span id="integrations">5. Third-Party API Integrations (Coverforce)</span>
+
+**Challenge:**
+Insurance quoting workflows involve multiple dependent API calls with strict data schemas, partial success states, and high failure rates due to malformed inputs or missing context. Manually handling these workflows was slow (~1 hour per quote), error-prone, and impossible to scale. We needed a system that could dynamically reason about which APIs to call and in what order, validate and transform data between steps, recover gracefully from errors, persist intermediate and final states, and present a clean, deterministic UX to the end user.
+
+**What I Built:**
+Led the design and implementation of a production-grade, multi-agent third-party API integration to automate complex insurance quoting workflows. Built a reliable, agentic system capable of orchestrating multiple APIs, validating inputs, handling partial failures, persisting state, and returning user-friendly outputs—all in real time.
+
+The system architecture consisted of:
+- **Frontend (Next.js)**: Initiates quote requests and renders progress + results
+- **Backend API (FastAPI)**: Control plane for workflow execution
+- **Agent Layer**: Multiple specialized agents for input validation, API selection/sequencing, schema transformation, and error interpretation
+- **Database (PostgreSQL)**: Stores workflow state, tracks partial progress, persists final quote results
+- **Error Workflow Engine**: Dedicated failure paths with structured error objects and user-safe messaging
+
+**Agentic Workflow Design:**
+Rather than treating the integration as a single request/response cycle, I implemented it as a stepwise agentic workflow with specialized agents:
+
+1. **Pre-flight Agent**: Validates user input, normalizes fields to match API schemas, prevents downstream failures early
+2. **Planning Agent**: Determines which APIs are required for the given quote, establishes call ordering and dependencies
+3. **Execution Agents**: Execute individual API calls, transform responses into canonical internal formats, handle retries and backoff
+4. **Validation Agent**: Ensures responses meet business and schema constraints, detects partial success or degraded responses
+5. **Finalization Agent**: Aggregates results, computes final outputs, prepares user-safe response payloads
+
+Each agent was prompted and constrained to perform one narrow responsibility, improving reliability and debuggability.
+
+**Key Technical Decisions:**
+- **Multi-agent orchestration**: Separated concerns across specialized agents rather than monolithic processing. Each agent handles one specific responsibility (validation, planning, execution, aggregation), making the system more maintainable and debuggable.
+- **Error-first architecture**: Built parallel error workflow that could be triggered at any step—structured error classification (validation vs upstream vs system), immediate persistence of failure state to database, graceful degradation where possible, user-readable error messages without exposing internal details, safe retries without duplicating side effects.
+- **Stateful workflow design**: System could write intermediate results to database, update workflow state multiple times, recover from mid-execution failures, and guarantee consistency across retries. Required careful transaction design and explicit control over when and how writes occurred.
+- **Schema transformation layer**: Built explicit transformation logic between external API schemas and internal canonical format. Prevented schema mismatches from propagating through the system.
+
+**Key Product Decisions:**
+- **Deterministic UX**: Designed frontend/backend contract to ensure deterministic request schemas, clear loading and progress states, idempotent backend endpoints, real-time status updates, and clean final result rendering. Frontend could reliably trigger workflows, poll or await completion, and display success or failure without ambiguity.
+- **Graceful degradation**: System handles partial failures intelligently—if 2 out of 3 carrier APIs succeed, return available quotes instead of failing entirely. Users get partial value even when some integrations fail.
+- **Observable workflows**: Every step logged and tracked in database. Enabled debugging production issues by replaying exact workflow execution sequences.
+
+**Impact:**
+- Reduced quote processing time from ~1 hour to under 10 minutes
+- Enabled fully automated quoting at scale
+- Significantly reduced manual errors in quote processing
+- Became a reusable pattern for future third-party integrations
+- Strengthened ability to design resilient integration systems, read and reason through poorly documented APIs, build agentic workflows with operational guarantees, and think end-to-end about product, UX, and systems reliability
+
+---
+
+## <span id="proposals">6. Templates and Proposals</span>
 
 **Challenge:**
 Insurance brokers spend hours manually creating branded proposals—copying policy data into Word docs, adding logos, formatting tables. Every agency has unique branding requirements. We needed proposal automation that preserved each agency's exact visual identity while filling in policy-specific data.
@@ -260,7 +312,7 @@ Insurance brokers spend hours manually creating branded proposals—copying poli
 
 ---
 
-## <span id="acord-forms">6. ACORD Form Automation</span>
+## <span id="acord-forms">7. ACORD Form Automation</span>
 
 **Challenge:**
 ACORD forms (125, 126, 140) are standardized insurance PDFs with 50+ fields that brokers manually fill for every carrier submission. This tedious data entry wastes hours per submission and creates bottlenecks in the quoting workflow. We needed automation that could both extract data from filled forms AND populate blank forms from customer information.
@@ -281,7 +333,7 @@ Built an automated ACORD form system that handles bi-directional workflows: extr
 
 ---
 
-## <span id="landing-page">7. Landing Page</span>
+## <span id="landing-page">8. Landing Page</span>
 
 Designed and built the complete GTM funnel at **[usemulligan.com](https://usemulligan.com)** using Next.js. The landing page serves as our entire sales team—replacing demo calls with self-serve signup.
 
@@ -296,7 +348,7 @@ Built with Next.js for fast load times (&lt;2s), SEO optimization, and seamless 
 
 ---
 
-## <span id="documentation">8. Documentation</span>
+## <span id="documentation">9. Documentation</span>
 
 Built comprehensive product documentation for Mulligan's self-serve PLG model using **Mintlify**. The docs enable users to onboard, troubleshoot, and integrate without human support.
 
