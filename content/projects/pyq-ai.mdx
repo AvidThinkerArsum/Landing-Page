@@ -251,6 +251,10 @@ Rather than treating the integration as a single request/response cycle, I imple
 
 Each agent was prompted and constrained to perform one narrow responsibility, improving reliability and debuggability.
 
+<img src="/images/n8n1.png" alt="Multi-agent workflow orchestration in n8n" className="w-full rounded-lg border-2 border-primary/20 my-6" />
+
+*n8n workflow integrating frontend with backend to third-party carrier APIs—performing validation, writing to database, error handling, and agentically filling API requests to retrieve quotes and display results back to the user*
+
 **Key Technical Decisions:**
 - **Multi-agent orchestration**: Separated concerns across specialized agents rather than monolithic processing. Each agent handles one specific responsibility (validation, planning, execution, aggregation), making the system more maintainable and debuggable.
 - **Error-first architecture**: Built parallel error workflow that could be triggered at any step—structured error classification (validation vs upstream vs system), immediate persistence of failure state to database, graceful degradation where possible, user-readable error messages without exposing internal details, safe retries without duplicating side effects.
