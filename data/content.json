@@ -228,6 +228,22 @@
         "Add more insights",
         "Add sales strategies"
       ]
+    },
+    {
+      "title": "Meditations",
+      "author": "Marcus Aurelius",
+      "cover": "/images/headstarter.png",
+      "gradient": "from-slate-700 via-stone-600 to-zinc-500",
+      "takeaways": [
+        "We filter our thoughts based on others' opinions constantly, even unconsciously - ask whether you're doing something because you want to or because it feels safe",
+        "Death is as natural as birth and aging - life is a rent borrowed from nature that must eventually be returned, nothing more to dwell on",
+        "Stoicism's core flaw: it teaches safety and enduring pain, not how to enjoy life - humans need humans, not just protection and provision",
+        "Don't be angered by people's flaws - a bad person being bad is expected; correct others out of humility to help them, not to boast",
+        "The shortness of life is a fact and everything happens for a reason - accept nature's course and you won't waste time in angst",
+        "Another flaw in stoicism: it overestimates the power of logic alone - some of history's most logical people have also been its cruelest",
+        "The only thing standing between you and what you want to achieve is you yourself",
+        "Meditations was never intended for publication, it was Marcus's private journal - its values serve an individual well but can't be anyone's sole compass"
+      ]
     }
   ]
 }
