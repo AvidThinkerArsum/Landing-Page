@@ -233,7 +233,7 @@
       "title": "Meditations",
       "author": "Marcus Aurelius",
       "cover": "/images/headstarter.png",
-      "gradient": "from-slate-700 via-stone-600 to-zinc-500",
+      "gradient": "from-indigo-800 via-slate-700 to-blue-600",
       "takeaways": [
         "We filter our thoughts based on others' opinions constantly, even unconsciously - ask whether you're doing something because you want to or because it feels safe",
         "Death is as natural as birth and aging - life is a rent borrowed from nature that must eventually be returned, nothing more to dwell on",
@@ -243,6 +243,17 @@
         "Another flaw in stoicism: it overestimates the power of logic alone - some of history's most logical people have also been its cruelest",
         "The only thing standing between you and what you want to achieve is you yourself",
         "Meditations was never intended for publication, it was Marcus's private journal - its values serve an individual well but can't be anyone's sole compass"
+      ]
+    },
+    {
+      "title": "Robinson Crusoe",
+      "author": "Daniel Defoe",
+      "cover": "/images/banner.jpg",
+      "gradient": "from-cyan-700 via-sky-600 to-teal-500",
+      "takeaways": [
+        "Rereading it as an adult, I can see the colonial lens baked into the story - a European man arrives in nature framed as unkept and hostile, tames and controls it, then 'helps' the natives, a perspective I never noticed as a kid but couldn't miss a decade later",
+        "It's still a powerful case for self-reliance and adventure - surviving alone on an island and building every necessity from scratch is genuinely hard, and that's exactly what opened my mind as a kid to how beautiful travel and self-sufficiency can be",
+        "Growth isn't siloed - skills built in one domain carry into every other one (fitness feeds work, work feeds relationships), which is part of why I want to someday build a wooden house in the woods myself - the design, the craftsmanship, the closeness to nature"
       ]
     }
   ]
